@@ -22,6 +22,14 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
+//Routes
+// =============================================================
+
+require("./routes/workout-user-api-routes.js")(app)
+
+
+
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

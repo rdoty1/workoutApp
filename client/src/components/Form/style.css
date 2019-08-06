@@ -1,0 +1,10 @@
+.form {
+    width: 500px;
+    height: 500px;
+    color: black;
+    float: left;
+}
+
+input {
+    margin-right: 20px !important;
+}
