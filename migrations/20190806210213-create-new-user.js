@@ -50,7 +50,7 @@ module.exports = {
       }
     });
   },
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('NewUsers');
-  }
+  // down: (queryInterface, Sequelize) => {
+  //   return queryInterface.dropTable('NewUsers');
+  // }
 };
