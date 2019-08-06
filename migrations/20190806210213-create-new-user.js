@@ -17,6 +17,9 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
+      password: {
+        type: Sequelize.STRING
+      },
       age: {
         type: Sequelize.INTEGER
       },
@@ -36,13 +39,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
+        type: DataTypes.DATE,
+        field: 'beginTime',
         defaultValue: sequelize.literal('NOW()')
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE,
+        field: 'beginTime',
+        defaultValue: sequelize.literal('NOW()')
       }
     });
   },

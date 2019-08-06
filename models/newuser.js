@@ -4,12 +4,25 @@ module.exports = (sequelize, DataTypes) => {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
+    password:DataTypes.STRING,
     age: DataTypes.INTEGER,
     weight: DataTypes.INTEGER,
     timeFrame: DataTypes.INTEGER,
     daysPerWeek: DataTypes.INTEGER,
     workoutLength: DataTypes.INTEGER,
-    experienceLevel: DataTypes.STRING
+    experienceLevel: DataTypes.STRING,
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'beginTime',
+      defaultValue: sequelize.literal('NOW()')
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: 'beginTime',
+      defaultValue: sequelize.literal('NOW()')
+    }
+  }, {
+    timestamps: true,
   }, {});
   NewUser.associate = function(models) {
     // associations can be defined here
