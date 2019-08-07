@@ -9,8 +9,6 @@ import HomePage from "../src/pages/Homepage"
 
 
 
-
-
 function App() {
 
   return (
