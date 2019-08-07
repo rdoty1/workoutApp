@@ -8,7 +8,12 @@ import { Input, TextArea, FormBtn } from "./components/Form";
 import {Form} from "./components/Form"
 import HomePage from "../src/pages/Homepage"
 import WorkoutProgramPick from './pages/WorkoutProgramPick';
+
+import Calender from './pages/Calender';
+import Grids from "./pages/Grid"
+import '@progress/kendo-theme-default/dist/all.css';
 import Cal from './pages/Calender';
+
 
 
 
@@ -21,13 +26,11 @@ function App() {
 
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/programpicker" component={WorkoutProgramPick}/>
+        <Route exact path="/calender" component={Calender}/>
+        <Route exact path="/grid" component={Grids}/>
         <Route exact path="/calender" component={Cal}/>
 
-
-
       </div>
-
-
 
 
     </Router>
