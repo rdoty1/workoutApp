@@ -23,14 +23,17 @@ class HomePage extends Component {
         updatedAt: ''
     }
 
-    // componentDidMount()  {
-    //     this.loadUsers();
-    // }
+    componentDidMount()  {
+        this.loadUsers();
+    }
 
 
-    // loadUsers = () => {
-    //     API.
-    // }
+    loadUsers = (user) => {
+      userService.findUser(user)
+      console.log(user)
+
+        
+    }
 
       handleChange = event => {
         //looking for the change of input values on form 
@@ -47,6 +50,9 @@ class HomePage extends Component {
         event.preventDefault();
         console.log(this.state.firstName);
          const user = {
+
+
+
           firstName:this.state.firstName,
           lastName: this.state.lastName,
           email: this.state.email,
@@ -56,20 +62,11 @@ class HomePage extends Component {
           timeFrame: this.state.timeFrame,
           daysPerWeek:this.state.daysPerWeek,
           experienceLevel:this.state.experienceLevel
-          // firstName: "bilbo",
-          // lastName: "27312348173",
-          // email : "rina@gmail.com",
-          // password:"hello",
-          // age:24,
-          // weight:160,
-          // timeFrame: 8,
-          // daysPerWeek:4,
-          // workoutLength:45,
-          // experienceLevel:"Advanced"
+
          }
          console.log(user);
           userService.createUser(user)
-            // .then(res => this.loadUsers())
+            .then(res => this.loadUsers(user))
             .catch(err => console.log(err));
         
       };
@@ -132,12 +129,7 @@ class HomePage extends Component {
                   <input className="boxes" type="text" name="weight" value={this.state.weight} onChange={this.handleChange}  />
                   <br></br>
 
-                  <label>
-                  Your Goals:
-                  </label>
-                  <input className="boxes" type="text" name="goals" value={this.state.goals} onChange={this.handleChange} />
-                  <br></br>
-
+                
                   <label>
                   Time Frame:
                   </label>
@@ -202,8 +194,13 @@ class HomePage extends Component {
                 STEP THREE: VERIFY YOUR INFORMATION
                 </h1>
                 <br></br>
+
+              
+
+                
                 <input className="submit" type="submit" value="Submit" />
-      
+
+              
       
       
       
@@ -218,7 +215,6 @@ class HomePage extends Component {
             <Footer>
       
               <div className="foot">
-      
               THIS IS OUR PROJECT
               </div>
       

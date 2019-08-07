@@ -22,9 +22,6 @@ module.exports = function(app) {
       console.log("hello")
       console.log(dbUsers);
     });
-
   }) 
-
-  
 };
 
