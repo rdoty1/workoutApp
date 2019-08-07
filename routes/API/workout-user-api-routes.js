@@ -13,5 +13,18 @@ module.exports = function(app) {
         console.log(dbUsers);
       });
   });
+
+  app.post("/api/users/", function(req, res) {
+    db.User.create({})
+    .then(function(dbUsers) {
+      res.json(dbUsers);
+      console.log(res);
+      console.log("hello")
+      console.log(dbUsers);
+    });
+
+  }) 
+
+  
 };
 
