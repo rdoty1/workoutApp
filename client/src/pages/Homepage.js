@@ -188,23 +188,13 @@ class HomePage extends Component {
             <Container className="bodyThree">
               
               <div className="stepThree">
-      
-      
+    
                 <h1 className="stepOneTitle">
                 STEP THREE: VERIFY YOUR INFORMATION
                 </h1>
                 <br></br>
-
-              
-
-                
                 <input className="submit" type="submit" value="Submit" />
 
-              
-      
-      
-      
-      
               </div>
       
       
