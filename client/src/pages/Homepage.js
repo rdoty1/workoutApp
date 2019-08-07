@@ -4,10 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import Footer from "../components/Footer"
 import { Input, TextArea, FormBtn } from "../components/Form";
 import {Form} from "../components/Form"
-// import API from "./../utils/API/workout-user-api-routes"
-
-
-
+import userService from "../utils/userService"
 
 
 
@@ -26,8 +23,6 @@ class HomePage extends Component {
         updatedAt: ''
     }
 
-
-
     // componentDidMount()  {
     //     this.loadUsers();
     // }
@@ -45,25 +40,37 @@ class HomePage extends Component {
         this.setState({
             [name]: value       
         })
+        
       }
 
       handleFormSubmit = event => {
         event.preventDefault();
-          // API.saveBook({
-          //     firstName:this.State.firstName,
-          //     lastName: '',
-          //     email: '',
-          //     password:'',
-          //     age: '',
-          //     weight: '',
-          //     timeFrame: '',
-          //     daysPerWeek:'',
-          //     experienceLevel:'',
-          //     createdAt: '',
-          //     updatedAt: ''
-          // })
-          //   .then(res => this.loadBooks())
-          //   .catch(err => console.log(err));
+        console.log(this.state.firstName);
+         const user = {
+          firstName:this.state.firstName,
+          lastName: this.state.lastName,
+          email: this.state.email,
+          password:this.state.password,
+          age: this.state.age,
+          weight: this.state.weight,
+          timeFrame: this.state.timeFrame,
+          daysPerWeek:this.state.daysPerWeek,
+          experienceLevel:this.state.experienceLevel
+          // firstName: "bilbo",
+          // lastName: "27312348173",
+          // email : "rina@gmail.com",
+          // password:"hello",
+          // age:24,
+          // weight:160,
+          // timeFrame: 8,
+          // daysPerWeek:4,
+          // workoutLength:45,
+          // experienceLevel:"Advanced"
+         }
+         console.log(user);
+          userService.createUser(user)
+            // .then(res => this.loadUsers())
+            .catch(err => console.log(err));
         
       };
 
@@ -155,7 +162,7 @@ class HomePage extends Component {
                   <input className="boxes" type="text" name="experienceLevel" value={this.state.experienceLevel} onChange={this.handleChange} />
                   <br></br>
 
-                  <input className="submit" type="submit" value="Submit" />
+                  <input className="submit" type="submit" value="Submit" onClick={this.handleFormSubmit} />
 
                 </form>
                                 
