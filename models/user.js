@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     timeFrame: DataTypes.INTEGER,
     daysPerWeek: DataTypes.INTEGER,
     workoutLength: DataTypes.INTEGER,
-    experienceLevel: DataTypes.STRING,
+    experienceLevel:DataTypes.STRING,
     createdAt: {
       type: DataTypes.DATE,
       field: 'beginTime',
