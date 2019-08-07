@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('NewUsers', {
+    return queryInterface.createTable('Users', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -39,18 +39,18 @@ module.exports = {
         type: Sequelize.STRING
       },
       createdAt: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         field: 'beginTime',
-        defaultValue: sequelize.literal('NOW()')
+        defaultValue: Sequelize.literal('NOW()')
       },
       updatedAt: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         field: 'beginTime',
-        defaultValue: sequelize.literal('NOW()')
+        defaultValue: Sequelize.literal('NOW()')
       }
     });
   },
-  // down: (queryInterface, Sequelize) => {
-  //   return queryInterface.dropTable('NewUsers');
-  // }
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('Users');
+  }
 };
