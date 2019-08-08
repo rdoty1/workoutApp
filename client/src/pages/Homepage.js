@@ -191,7 +191,7 @@ class HomePage extends Component {
                 STEP THREE: VERIFY YOUR INFORMATION
                 </h1>
                 <br></br>
-                  <div>
+                  <div className="verify">
                     <h2>First Name: {this.state.firstName} </h2> 
                     <h2>Last Name: {this.state.lastName} </h2> 
                     <h2>Email: {this.state.email} </h2> 

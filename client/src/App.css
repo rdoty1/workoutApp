@@ -116,3 +116,7 @@ form {
     align-content: center;
 }
 
+
+.verify {
+    float:left;
+}

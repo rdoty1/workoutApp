@@ -15,9 +15,9 @@ class Cal extends Component {
     return (
       <div>
 
-<Jumbotron>
-              <h1>Find Today's Workout</h1>
-</Jumbotron>
+        <Jumbotron>
+            <h1>Find Today's Workout</h1>
+        </Jumbotron>
         
 
         <Calendar
@@ -27,15 +27,11 @@ class Cal extends Component {
 
         <p>*******The day's workout will appear in this space when you click the specific date*******</p>
 
-<Footer>
-      
-      <div className="foot">
-
-      THIS IS OUR PROJECT
-      </div>
-
-
-    </Footer>
+        <Footer>
+          <div className="foot">
+            THIS IS OUR PROJECT
+          </div>
+        </Footer>
       </div>
     );
   };
