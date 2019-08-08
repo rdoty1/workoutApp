@@ -19,17 +19,12 @@ function App() {
 
   return (
     <Router>
-
       <div>
-
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/programpicker" component={WorkoutProgramPick}/>
-        <Route exact path="/calender" component={Cal}/>
+        <Route exact path="/calendar" component={Cal}/>
         <Route exact path="/grid" component={Grids}/>
-       
-
       </div>
-
 
     </Router>
     
