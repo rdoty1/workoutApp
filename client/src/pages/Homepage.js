@@ -152,8 +152,6 @@ class HomePage extends Component {
                   <input className="boxes" type="text" name="experienceLevel" value={this.state.experienceLevel} onChange={this.handleChange} />
                   <br></br>
 
-                  <input className="submit" type="submit" value="Submit" onClick={this.handleFormSubmit} />
-
                 </form>
                                 
                 </Container>
@@ -202,7 +200,7 @@ class HomePage extends Component {
                     <h2>Workout Length : {this.state.workoutLength} </h2> 
                     <h2>Experience Level: {this.state.experienceLevel} </h2> 
                   </div>
-                <input className="submit" type="submit" value="Submit" />
+                  <input className="submit" type="submit" value="Submit" onClick={this.handleFormSubmit} />
 
                 
 
