@@ -104,3 +104,15 @@ form {
     margin: 10px;
 }
 
+
+.calendarText {
+    color: black;
+    text-align: center;
+}
+
+.react-calendar {
+    width: 100% !important;
+    height: 100% !important;
+    align-content: center;
+}
+
