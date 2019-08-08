@@ -5,22 +5,23 @@ import Footer from "../components/Footer"
 import { Input, TextArea, FormBtn } from "../components/Form";
 import {Form} from "../components/Form"
 import userService from "../utils/userService"
+import { runInThisContext } from 'vm';
 
 
 
 class HomePage extends Component {
     state = {
-        firstName:'',
-        lastName: '',
-        email: '',
-        password:'',
-        age: '',
-        weight: '',
-        timeFrame: '',
-        daysPerWeek:'',
-        experienceLevel:'',
-        createdAt: '',
-        updatedAt: ''
+      firstName:'',
+      lastName: '',
+      email: '',
+      password:'',
+      age: '',
+      weight: '',
+      timeFrame: '',
+      daysPerWeek:'',
+      experienceLevel:'',
+      createdAt: '',
+      updatedAt: ''
     }
 
     componentDidMount()  {
@@ -95,10 +96,8 @@ class HomePage extends Component {
                     First Name:
                   </label>
                   <input className="boxes" type="text" name="firstName"  value={this.state.firstName} onChange={this.handleChange} />
-
-                  
                   <br></br>
-                  
+
                   <label>
                     Last Name:
                   </label>
@@ -124,26 +123,25 @@ class HomePage extends Component {
                   <br></br>
 
                   <label>
-                  Your Weight:
+                  Your Weight (lbs):
                   </label>
                   <input className="boxes" type="text" name="weight" value={this.state.weight} onChange={this.handleChange}  />
                   <br></br>
 
-                
                   <label>
-                  Time Frame:
+                  Time Frame (weeks):
                   </label>
                   <input className="boxes" type="text" name="timeFrame" value={this.state.timeFrame} onChange={this.handleChange} />
                   <br></br>
 
                   <label>
-                  Days Per Week:
+                  Days Per Week (1-7):
                   </label>
                   <input className="boxes" type="text" name="daysPerWeek" value={this.state.daysPerWeek}  onChange={this.handleChange} />
                   <br></br>
 
                   <label>
-                  Workout Length:
+                  Workout Length (minutes):
                   </label>
                   <input className="boxes" type="text" name="workoutLength"  value={this.state.workoutLength} onChange={this.handleChange} />
                   <br></br>
@@ -193,7 +191,20 @@ class HomePage extends Component {
                 STEP THREE: VERIFY YOUR INFORMATION
                 </h1>
                 <br></br>
+                  <div>
+                    <h2>First Name: {this.state.firstName} </h2> 
+                    <h2>Last Name: {this.state.lastName} </h2> 
+                    <h2>Email: {this.state.email} </h2> 
+                    <h2>Password: {this.state.password} </h2> 
+                    <h2>Your Weight: {this.state.weight} </h2> 
+                    <h2>Time Frame: {this.state.timeFrame} </h2> 
+                    <h2>Days Per Week: {this.state.daysPerWeek} </h2> 
+                    <h2>Workout Length : {this.state.workoutLength} </h2> 
+                    <h2>Experience Level: {this.state.experienceLevel} </h2> 
+                  </div>
                 <input className="submit" type="submit" value="Submit" />
+
+                
 
               </div>
       
