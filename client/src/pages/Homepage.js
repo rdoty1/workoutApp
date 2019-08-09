@@ -73,12 +73,18 @@ class HomePage extends Component {
 
     render() {
         return (
+
           <Container fluid>
-      
-            <Jumbotron>
-              <h1> WORKOUT APP</h1>
+
+           <Jumbotron>
+            <h1> WORKOUT APP</h1>
             </Jumbotron>
-            
+
+
+
+            <Row>
+              <Col size="md-6">
+
             <Container className="bodyOne">
               <div className="stepOne">
               <h1 className="stepOneTitle">STEP ONE: FILL OUT INFORMATION</h1>
@@ -193,6 +199,8 @@ class HomePage extends Component {
                     <input className="" type="text" name="experienceLevel" value={this.state.experienceLevel} onChange={this.handleChange} />
                     </Col>
                   </Row>
+                 
+                 
                
                 
                
@@ -201,13 +209,16 @@ class HomePage extends Component {
               </div>
             
             </Container>
+            </Col>
+            
 
       
 
       
       
 
-      
+          <Col size="md-6">
+          <Container className="steps">
             <Container className="bodyThree">
               
               <div className="stepThree">
@@ -233,21 +244,21 @@ class HomePage extends Component {
                 </Col>
                 </Row>
                 
+                
+                
 
               </div>
       
       
             </Container>
+            </Container>
+            </Col>
+            </Row>
       
         
       
-            <Footer>
-      
-              <div className="foot">
+            <Footer className="footer">
               THIS IS OUR PROJECT
-              </div>
-      
-        
             </Footer>
       
           </Container>
