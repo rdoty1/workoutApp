@@ -5,11 +5,10 @@ var style = {
     borderTop: "1px solid #E7E7E7",
     borderColor:"black",
     textAlign: "center",
-    padding: "20px",
     position: "fixed",
     left: "0",
     bottom: "0",
-    height: "10px",
+    height: "30px",
     width: "100%",
     marginTop:"30px",
     
@@ -19,7 +18,6 @@ var style = {
 
 var phantom = {
   display: 'block',
-  padding: '20px',
   height: '30px',
   width: '100%',
 }

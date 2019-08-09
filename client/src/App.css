@@ -30,12 +30,21 @@ input {
     align-self: flex-end;
 }
 
+.step {
+    display: none;
+}
+
+.fluid {
+    width: 100%;
+}
+
 .stepOne {
     padding-top: 0px;
     height: 630px;
-    margin-bottom: 5em;
+    margin: 25px;
     background-color: darkslategray;
-    width: 47%;
+    width: 100%;
+    margin-top: 51.5px;
 }
 
 .stepOneTitle {
@@ -51,9 +60,10 @@ input {
 .stepThree {
     padding-top: 0px;
     height: 630px;
-    margin-bottom: 5em;
+    margin: 25px;
     background-color: darkslategray;
-    width: 47%;
+    width: 100%;
+    margin-top: 75px;
 }
 
 .submit {
@@ -118,21 +128,19 @@ input {
 .Bicep.Curls {
     float: left;
     margin: 10px;
-    float:left;
-    margin:10px;
+    float: left;
+    margin: 10px;
     float: left;
     text-align: left;
     margin-left: 10px;
 }
 
-
 form {
-    float:left;
+    float: left;
 }
 
-
 .container {
-    float:left;
+    float: left;
     margin-left: 1em;
     margin-top: -1.5em;
     margin-left: 1em;
