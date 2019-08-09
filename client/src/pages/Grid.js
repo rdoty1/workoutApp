@@ -10,9 +10,6 @@ import { Grid, GridColumn } from '@progress/kendo-react-grid';
 class Grids extends Component {
   constructor(props) {
     super(props);
-
-    
-
     this.state = {
       
       data: [
@@ -30,24 +27,11 @@ class Grids extends Component {
       title: "Your Workout Page!",
       
     }
-
-
-    const workoutExercise = this.state.data.map( exercises => exercises)
-      console.log(workoutExercise[0].exercise);
   
   }
 
- 
-
-  
-
-
-
   render() {
-
-  
     return (
-
 
       <Container>
 
@@ -57,22 +41,15 @@ class Grids extends Component {
               
             </Jumbotron>
              
-           
-            
             <Grid data={this.state.data}>
               <GridColumn field="exercise" className="workoutName" title="Exercise"/>
               <GridColumn field="sets" className="workoutName"/>
               <GridColumn field="reps" className="workoutName"/>
               <GridColumn field="difficulty" className="workoutName"/>
             </Grid>
-           
-
-              
-
+        
             <Container>
-             
-             
-           
+    
               {this.state.data.map(exercise => 
                   <Col size="md-6">
                     <div>
@@ -81,13 +58,13 @@ class Grids extends Component {
                     </div>
                   </Col>
               
-                )}
+              )}
 
             </Container>
 
         </div>
-
-    </Container>
+        
+      </Container>
 
     );
   }
