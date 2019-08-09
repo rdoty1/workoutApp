@@ -15,6 +15,7 @@ import Cal from './pages/Cal';
 
 
 
+
 function App() {
 
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route exact path="/programpicker" component={WorkoutProgramPick}/>
         <Route exact path="/calendar" component={Cal}/>
         <Route exact path="/grid" component={Grids}/>
+        
+        
       </div>
 
     </Router>

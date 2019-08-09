@@ -116,8 +116,22 @@ input {
 }
 
 .verify {
+
+    float:left;
+}
+
+
+.date {
+    color:red;
+}
+
+.Bicep.Curls {
+    float:left;
+    margin:10px;
+
     float: left;
     text-align: left;
     margin-left: 1em;
     margin-top: -1.5em;
+
 }
