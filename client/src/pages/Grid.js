@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Jumbotron from "../components/Jumbotron";
-import workouts from "../components/Workouts/workouts"
+
 import { Col, Row, Container } from "../components/Grid";
 
 
@@ -9,66 +9,85 @@ import { Col, Row, Container } from "../components/Grid";
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 
 class Grids extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    console.log(workouts)
 
-    this.state = {
-      
-      data: [
 
-        {workout: "Bicep Curls", sets: 4 , reps: 10 , difficulty: "Beginner" },
-        {workout: "Hammer Curls", sets: 4 , reps: 10 , difficulty: "Intermediate"},
-        {workout: "Dumbbell Rows", sets: 4 , reps: 10 , difficulty: "Intermediate"},
-        {workout: "Cable Rows", sets: 4 , reps: 10 , difficulty: "Intermediate"},
-        {workout: "Reverse Curls", sets: 4 , reps: 10 , difficulty: "Advanced"},
-        {workout: "LAT Pulldown", sets: 4 , reps: 10 , difficulty: "Beginner"},
-        {workout: "Seated Curls", sets: 4 , reps: 10 , difficulty: "Intermediate"},
-        
-      ],
-      
-      title: "Your Workout Page!",
-      
+        this.state = {
+
+            data: [
+
+                { workout: "Bicep Curls", sets: 4, reps: 10, difficulty: "Beginner" },
+                { workout: "Hammer Curls", sets: 4, reps: 10, difficulty: "Intermediate" },
+                { workout: "Dumbbell Rows", sets: 4, reps: 10, difficulty: "Intermediate" },
+                { workout: "Cable Rows", sets: 4, reps: 10, difficulty: "Intermediate" },
+                { workout: "Reverse Curls", sets: 4, reps: 10, difficulty: "Advanced" },
+                { workout: "LAT Pulldown", sets: 4, reps: 10, difficulty: "Beginner" },
+                { workout: "Seated Curls", sets: 4, reps: 10, difficulty: "Intermediate" },
+
+            ],
+
+            title: "Your Workout Page!",
+
+        }
     }
-  }
-  render() {
-  
-    return (
+    render() {
+
+        return (
 
 
-      <Container>
+            <
+            Container >
 
-        <div className="App">
-            <Jumbotron>
-              <h1 className="App-title">{this.state.title}</h1>
-              
-            </Jumbotron>
-             
-           
-            
-            <Grid data={this.state.data}>
-              <GridColumn field="workout" className="workoutName" title="Workout"/>
-              <GridColumn field="sets" className="workoutName"/>
-              <GridColumn field="reps" className="workoutName"/>
-              <GridColumn field="difficulty" className="workoutName"/>
-            </Grid>
-           
+            <
+            div className = "App" >
+            <
+            Jumbotron >
+            <
+            h1 className = "App-title" > { this.state.title } < /h1>
 
-              
+            <
+            /Jumbotron>
 
-            
-             <div className={this.state.data[0].workout}> {this.state.data[0].workout}</div>
 
-          
-          
-        </div>
 
-    </Container>
+            <
+            Grid data = { this.state.data } >
+            <
+            GridColumn field = "workout"
+            className = "workoutName"
+            title = "Workout" / >
+            <
+            GridColumn field = "sets"
+            className = "workoutName" / >
+            <
+            GridColumn field = "reps"
+            className = "workoutName" / >
+            <
+            GridColumn field = "difficulty"
+            className = "workoutName" / >
+            <
+            /Grid>
 
-    );
-  }
+
+
+
+
+            <
+            div className = { this.state.data[0].workout } > { this.state.data[0].workout } < /div>
+
+
+
+            <
+            /div>
+
+            <
+            /Container>
+
+        );
+    }
 }
 
 
-export default Grids; 
+export default Grids;

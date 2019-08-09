@@ -16,7 +16,7 @@ label {
 }
 
 input {
-    width: 7em;
+    width: 10em;
     background-color: black;
     color: white;
 }
@@ -35,14 +35,10 @@ input {
     height: 630px;
     margin-bottom: 5em;
     background-color: darkslategray;
+    width: 47%;
 }
 
 .stepOneTitle {
-    color: white;
-    padding-top: 5px;
-}
-
-.stepTwoTitle {
     color: white;
     padding-top: 5px;
 }
@@ -52,18 +48,12 @@ input {
     padding-top: 5px;
 }
 
-.stepTwo {
-    padding-top: 0px;
-    height: 630px;
-    margin-bottom: 5em;
-    background-color: darkslategray;
-}
-
 .stepThree {
     padding-top: 0px;
     height: 630px;
     margin-bottom: 5em;
     background-color: darkslategray;
+    width: 47%;
 }
 
 .submit {
@@ -116,22 +106,20 @@ input {
 }
 
 .verify {
-
-    float:left;
+    float: left;
+    text-align: left;
+    margin-left: 1em;
 }
 
-
 .date {
-    color:red;
+    color: red;
 }
 
 .Bicep.Curls {
-    float:left;
-    margin:10px;
-
+    float: left;
+    margin: 10px;
     float: left;
     text-align: left;
     margin-left: 1em;
     margin-top: -1.5em;
-
 }
