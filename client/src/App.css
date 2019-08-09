@@ -116,7 +116,7 @@ input {
 }
 
 .verify {
-<<<<<<< HEAD
+
     float:left;
 }
 
@@ -128,10 +128,20 @@ input {
 .Bicep.Curls {
     float:left;
     margin:10px;
-=======
+
     float: left;
     text-align: left;
-    margin-left: 1em;
-    margin-top: -1.5em;
->>>>>>> d9791ed3bbd60afe758177755c372a01ea13c756
+    margin-left: 10px;
+
+
+}
+
+
+form {
+    float:left;
+}
+
+
+.container {
+    float:left;
 }
