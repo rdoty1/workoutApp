@@ -1,37 +1,3 @@
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
-    pointer-events: none;
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .firstName {
     width: 25%;
 }
@@ -45,65 +11,98 @@
 }
 
 label {
-    margin-left: 10px;
-    margin-top: 16px;
     float: left;
+    margin-left: 1em;
 }
 
 input {
-    margin-left: 10px;
-    margin-top: 15px;
-    float: right !important;
+    width: 7em;
+    background-color: black;
+    color: white;
+}
+
+.userInfo {
+    display: flex-start;
+    justify-content: left;
+}
+
+.boxes {
+    align-self: flex-end;
 }
 
 .stepOne {
     padding-top: 0px;
-    height: 800px;
+    height: 630px;
+    margin-bottom: 5em;
+    background-color: darkslategray;
 }
 
 .stepOneTitle {
-    color: black;
+    color: white;
     padding-top: 5px;
 }
 
 .stepTwoTitle {
-    color: black;
+    color: white;
     padding-top: 5px;
 }
 
 .stepThreeTitle {
-    color: black;
+    color: white;
     padding-top: 5px;
-}
-
-form {
-    float: left;
 }
 
 .stepTwo {
     padding-top: 0px;
-    height: 800px;
+    height: 630px;
+    margin-bottom: 5em;
+    background-color: darkslategray;
 }
 
 .stepThree {
     padding-top: 0px;
-    height: 800px;
+    height: 630px;
+    margin-bottom: 5em;
+    background-color: darkslategray;
 }
 
 .submit {
-    width: 100px;
-    height: 50px;
+    margin-top: 400px;
     text-align: center;
-    margin-left: 150px;
+    margin-left: -130px;
+    background-color: black;
+    color: white;
+    position: relative;
 }
 
-.image {
-    width: 25em !important;
-    height: 12.75em !important;
+.image1 {
+    width: 13em !important;
+    height: 9.5em !important;
     float: left;
-    margin: 10px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    border: solid;
+    border-color: black;
 }
 
+.image2 {
+    width: 13em !important;
+    height: 9.5em !important;
+    float: right;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    border: solid;
+    border-color: black;
+}
+
+.image3 {
+    width: 13em !important;
+    height: 9.5em !important;
+    float: left;
+    margin-left: 1em;
+    border: solid;
+    border-color: black;
+}
 
 .calendarText {
     color: black;
@@ -116,8 +115,8 @@ form {
     align-content: center;
 }
 
-
 .verify {
+
     float:left;
 }
 
@@ -129,4 +128,10 @@ form {
 .Bicep.Curls {
     float:left;
     margin:10px;
+
+    float: left;
+    text-align: left;
+    margin-left: 1em;
+    margin-top: -1.5em;
+
 }
