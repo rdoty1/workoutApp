@@ -126,7 +126,7 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
   AudioPlayer = (props) =>{
     if(!this.state.music) return <></>
     else{
-      return <iframe src={this.state.music} allow="autoplay" scrolling="no" frameBorder="0"></iframe>   
+      return <iframe src={this.state.music}  style={{display:'none'}} allow="autoplay" scrolling="no" frameBorder="0"></iframe>   
     }
    
 
@@ -177,7 +177,7 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
               <GridColumn field="reps" className="workoutName" name="reps"/>
               <GridColumn field="difficulty" className="workoutName" name="difficulty"/>
             </Grid>
-        
+          <this.AudioPlayer />
             <Container>
     
               {this.state.data.map((exercise,index) => 
