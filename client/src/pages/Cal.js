@@ -4,7 +4,6 @@ import Jumbotron from "../components/Jumbotron";
 import Footer from "../components/Footer";
 import { Col, Row, Container } from "../components/Grid";
 
-
 class Cal extends Component {
   state = {
     date: new Date(),
@@ -46,9 +45,7 @@ class Cal extends Component {
     }],
   }
  
-  onChange = date => this.setState({ date })
-  
-  
+  handleChange = date => this.setState({ date })
   
  
   render() {
@@ -58,10 +55,12 @@ class Cal extends Component {
         <Jumbotron>
             <h1>Find Today's Workout</h1>
         </Jumbotron>
+
+       
         
 
         <Calendar
-          onChange={this.onChange}
+          handleChange={this.handleChange}
           value={this.state.date}
          
         />
@@ -76,7 +75,9 @@ class Cal extends Component {
 
                     {exercise.sets}
                     {exercise.reps}
+                    
                 </h2>
+
                 
               </div>
             </Col>
