@@ -67,23 +67,27 @@ class Cal extends Component {
         />
 
         <Container>
-        <p> 
+        <div> 
           {this.state.exercises.map(exercise =>
 
             <Col size="md-6">
               <div>
-                <h2>Exercise: {exercise.exercise} 
+                <h2 className="calDisplay"> Exercise: {exercise.exercise},
 
-                    {exercise.sets}
-                    {exercise.reps}
+                    Sets: {exercise.sets},
+
+                    Reps: {exercise.reps}
                 </h2>
                 
               </div>
             </Col>
           )}
+          
+
+          <button> Go to workout</button>
 
         
-        </p>
+        </div>
         </Container>
 
         <Footer>
