@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function SetsForm(props) {
+  console.log(props)
     
     return (
       <form>
@@ -16,7 +17,7 @@ export default function SetsForm(props) {
         <br></br>
         <label>
           Set 3:
-          <input type="text" name="Set3" />
+          <input type="text" name="Set3"/>
         </label>
         <br></br>
         <label>
@@ -25,8 +26,11 @@ export default function SetsForm(props) {
         </label>
         <br></br>
         <br></br>
+
         <input type="submit" value="Submit" onClick={props.PlayAudio}/>
       </form>
     );
 
 }
+
+

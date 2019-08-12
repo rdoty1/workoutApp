@@ -11,6 +11,7 @@ import WorkoutProgramPick from './pages/WorkoutProgramPick';
 import Grids from "./pages/Grid"
 import '@progress/kendo-theme-default/dist/all.css';
 import Cal from './pages/Cal';
+import Login from './pages/Login'
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/programpicker" component={WorkoutProgramPick}/>
         <Route exact path="/calendar" component={Cal}/>
         <Route exact path="/grid" component={Grids}/>
+        <Route exact path="/login" component={Login}/>
         
         
       </div>
