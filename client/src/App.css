@@ -146,3 +146,51 @@ form {
     margin-left: 1em;
     margin-top: -1.5em;
 }
+
+.calDisplay {
+    padding:15px;
+}
+
+.Login {
+    font-family: sans-serif;
+    text-align: center;
+}
+.form-input {
+    margin: 0 auto;
+    height: 500px;
+    width: 500px;
+}
+.form-inside-input {
+    height: 500px;
+    width: 200px;
+    margin: 0 auto;
+    padding-left:40%;
+    padding-right:40%;
+    padding-top:10%;
+}
+
+.insert {
+    color:black;
+    
+}
+
+.formContainer {
+    border:solid;
+    border-color:black;
+    width:500px;
+    height:500px;
+}
+
+.title {
+    color:red;
+    
+}
+
+.please {
+    text-align:center;
+}
+
+.formHeader {
+    border:solid;
+    color:black;
+}

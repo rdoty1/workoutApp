@@ -12,7 +12,19 @@ class Grids extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+
+      sets: {
+        set1:'',
+        set2: '',
+        set3: '',
+        set4: '',
+      },
+
+
+
+     
+
+
       data: [
 
         {exercise: "Bicep Curls", sets: 4 , reps: 10 , difficulty: "Beginner" },
@@ -28,8 +40,37 @@ class Grids extends Component {
       title: "Your Workout Page!",
       
     }
+
+   
+
+  
   
   }
+  handleChange = event => {
+
+    const {name, value} = event.target;
+    this.setState({
+      [name]:value
+    })
+  }
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log(this.state.set1); 
+    const sets = {
+      set1:this.state.set1,
+      set2:this.state.set2,
+      set3:this.state.set3,
+      set4:this.state.set4
+      
+
+    }
+
+
+    
+
+  }
+
 
   render() {
     return (
@@ -43,10 +84,10 @@ class Grids extends Component {
             </Jumbotron>
              
             <Grid data={this.state.data}>
-              <GridColumn field="exercise" className="workoutName" title="Exercise"/>
-              <GridColumn field="sets" className="workoutName"/>
-              <GridColumn field="reps" className="workoutName"/>
-              <GridColumn field="difficulty" className="workoutName"/>
+              <GridColumn field="exercise" className="workoutName" title="Exercise" name="exercise"/>
+              <GridColumn field="sets" className="workoutName" name="sets"/>
+              <GridColumn field="reps" className="workoutName" name="reps"/>
+              <GridColumn field="difficulty" className="workoutName" name="difficulty"/>
             </Grid>
         
             <Container>
@@ -55,13 +96,39 @@ class Grids extends Component {
                   <Col size="md-6">
                     <div>
                       <h2>{exercise.exercise}</h2>
-                      <SetsForm sets={exercise.sets} />
+                      <form>
+                        <label>
+                          Set 1:
+                          <input type="text" name="Set1" value={this.state.sets.set1} onChange={this.handleChange}/>
+                        </label>
+                        <br></br>
+                        <label>
+                          Set 2:
+                          <input type="text" name="Set2" value={this.state.sets.set2} onChange={this.handleChange}/>
+                        </label>
+                        <br></br>
+                        <label>
+                          Set 3:
+                          <input type="text" name="Set3" value={this.state.sets.set3} onChange={this.handleChange}/>
+                        </label>
+                        <br></br>
+                        <label>
+                          Set 4:
+                          <input type="text" name="Set4" value={this.state.sets.set4} onChange={this.handleChange} />
+                        </label>
+                        <br></br>
+                        <br></br>
+                        <input type="submit" value="Submit"  />
+                      </form>
+                      
                     </div>
                   </Col>
               
               )}
 
             </Container>
+
+
 
         </div>
         
