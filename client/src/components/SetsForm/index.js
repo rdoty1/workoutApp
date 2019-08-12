@@ -26,7 +26,8 @@ export default function SetsForm(props) {
         </label>
         <br></br>
         <br></br>
-        <input type="submit" value="Submit"  />
+
+        <input type="submit" value="Submit" onClick={props.PlayAudio}/>
       </form>
     );
 
