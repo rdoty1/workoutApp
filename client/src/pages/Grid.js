@@ -166,26 +166,29 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
   render() {
     return (
 
-      <Container>
+      
 
         <div className="App">
             <Jumbotron>
               <h1 className="App-title">{this.state.title}</h1>
               
             </Jumbotron>
-             
+            <Container>
+              <Row>
             <Grid data={this.state.data}>
               <GridColumn field="exercise" className="workoutName" title="Exercise" name="exercise"/>
               <GridColumn field="sets" className="workoutName" name="sets"/>
               <GridColumn field="reps" className="workoutName" name="reps"/>
               <GridColumn field="difficulty" className="workoutName" name="difficulty"/>
             </Grid>
+            </Row>
+           
           <this.AudioPlayer />
-            <Container>
-    
+              <div className='mt-3'>
+    <Row >
               {this.state.data.map((exercise,index) => 
-                  <Col size="md-6" key={index}>
-                    <div>
+                  <Col size="md-4" key={index}>
+                    <div className="my-5">
                       <h2>{exercise.exercise}</h2>
                       <form>
                         <label>
@@ -214,15 +217,15 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
                       
                     </div>
                   </Col>
-              
+           
               )}
+   </Row>
+   </div>
 
-            </Container>
-
-        </div>
 
       </Container>
 
+      </div>
     );
   }
 

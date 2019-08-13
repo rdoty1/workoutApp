@@ -26,6 +26,10 @@ input {
     justify-content: left;
 }
 
+.jumbotron {
+    height: auto !important;
+}
+
 .boxes {
     align-self: flex-end;
 }
@@ -39,12 +43,12 @@ input {
 }
 
 .stepOne {
-    padding-top: 0px;
-    height: 630px;
-    margin: 25px;
+    /* padding-top: 0px; */
+    height: 100%;
+    /* margin: 25px; */
     background-color: darkslategray;
     width: 100%;
-    margin-top: 51.5px;
+    /* margin-top: 51.5px; */
 }
 
 .stepOneTitle {
@@ -52,7 +56,8 @@ input {
     padding-top: 5px;
 }
 
-.stepThreeTitle {
+
+/* .stepThreeTitle {
     color: white;
     padding-top: 5px;
 }
@@ -64,7 +69,7 @@ input {
     background-color: darkslategray;
     width: 100%;
     margin-top: 75px;
-}
+} */
 
 .submit {
     margin-top: 400px;
@@ -73,35 +78,6 @@ input {
     background-color: black;
     color: white;
     position: relative;
-}
-
-.image1 {
-    width: 13em !important;
-    height: 9.5em !important;
-    float: left;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    border: solid;
-    border-color: black;
-}
-
-.image2 {
-    width: 13em !important;
-    height: 9.5em !important;
-    float: right;
-    margin-bottom: 1em;
-    margin-right: 1em;
-    border: solid;
-    border-color: black;
-}
-
-.image3 {
-    width: 13em !important;
-    height: 9.5em !important;
-    float: left;
-    margin-left: 1em;
-    border: solid;
-    border-color: black;
 }
 
 .calendarText {
@@ -139,13 +115,14 @@ form {
     float: left;
 }
 
-.container {
+
+/* .container {
     float: left;
     margin-left: 1em;
     margin-top: -1.5em;
     margin-left: 1em;
     margin-top: -1.5em;
-}
+} */
 
 .calDisplay {
     padding: 15px;
@@ -199,4 +176,15 @@ form {
 
 .workoutButton {
     color: black;
+}
+
+.arnold {
+    /* height: 25em; */
+    width: 100%;
+    display: inline-block;
+}
+
+.foot {
+    border: solid;
+    border-color: black;
 }
