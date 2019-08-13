@@ -184,7 +184,7 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
             </Row>
            
           <this.AudioPlayer />
-              <div className='mt-5'>
+              <div className='mt-3'>
     <Row >
               {this.state.data.map((exercise,index) => 
                   <Col size="md-4" key={index}>
