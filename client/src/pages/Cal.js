@@ -64,19 +64,20 @@ class Cal extends Component {
           value={this.state.date}
          
         />
-
         <Container>
         <div> 
           {this.state.exercises.map(exercise =>
 
             <Col size="md-6">
               <div>
-                <h2 className="calDisplay"> Exercise: {exercise.exercise},
+               
+                <h2 className="calDisplay"> 
+                  Exercise: {exercise.exercise},
 
 
-                    Sets: {exercise.sets},
+                  Sets: {exercise.sets},
 
-                    Reps: {exercise.reps}
+                  Reps: {exercise.reps}
                 </h2>
 
                 
