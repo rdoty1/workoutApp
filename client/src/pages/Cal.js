@@ -3,46 +3,12 @@ import Calendar from 'react-calendar';
 import Jumbotron from "../components/Jumbotron";
 import Footer from "../components/Footer";
 import { Col, Row, Container } from "../components/Grid";
+import styled from 'styled-components'
 
 class Cal extends Component {
   state = {
     date: new Date(),
-    workout: "Arms",
-    exercises: [{
-      exercise: "Bicep Curls",
-      sets: 4,
-      reps: 10
-    }, {
-      exercise: "Hammer Curls",
-      sets: 4,
-      reps: 10
-
-    },{
-      exercise: "Dumbbell Rows",
-      sets: 4,
-      reps: 10
-
-    },{
-      exercise: "Cable Rows",
-      sets: 4,
-      reps: 10
-
-    },{
-      exercise: "Reverse Curls",
-      sets: 4,
-      reps: 10
-
-    },{
-      exercise: "LAT Pulldown",
-      sets: 4,
-      reps: 10
-
-    },{
-      exercise: "Seated",
-      sets: 4,
-      reps: 10
-
-    }],
+    
   }
  
   handleChange = date => this.setState({ date })
@@ -64,33 +30,12 @@ class Cal extends Component {
           value={this.state.date}
          
         />
-        <Container>
-        <div> 
-          {this.state.exercises.map(exercise =>
 
-            <Col size="md-6">
-              <div>
-               
-                <h2 className="calDisplay"> 
-                  Exercise: {exercise.exercise},
+          <BtnWrap>
+            <a className="workoutButton" href="/grid">See Today's Workout</a>
+          </BtnWrap>
 
 
-                  Sets: {exercise.sets},
-
-                  Reps: {exercise.reps}
-                </h2>
-
-                
-              </div>
-            </Col>
-          )}
-          
-
-          <button> Go to workout</button>
-
-        
-        </div>
-        </Container>
 
         <Footer>
           <div className="foot">
@@ -103,6 +48,15 @@ class Cal extends Component {
 };
 
 
+const BtnWrap = styled.div`
+text-align:center;
+font-size:40px;
+margin-top:50px;
+color:black;
+font-weight:bold;
 
+
+
+`
 
 export default Cal;
