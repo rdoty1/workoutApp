@@ -9,11 +9,14 @@ import "firebase/storage"
 
 
 
+
 // Import the Grid component.
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 
+require('dotenv').config({ path: '../.env' });
+
 var firebaseConfig = {
-  apiKey: "AIzaSyDPJmbwARVxRJ1jcfnvbJ1cySeFE7lQ7ZQ",
+  apiKey: process.env.Key,
   authDomain: "trainer-audio.firebaseapp.com",
   databaseURL: "https://trainer-audio.firebaseio.com",
   projectId: "trainer-audio",
