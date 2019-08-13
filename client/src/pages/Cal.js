@@ -4,6 +4,7 @@ import Jumbotron from "../components/Jumbotron";
 import Footer from "../components/Footer";
 import { Col, Row, Container } from "../components/Grid";
 import styled from 'styled-components'
+import Slider from '@material-ui/core/Slider';
 
 class Cal extends Component {
   state = {
@@ -34,6 +35,10 @@ class Cal extends Component {
           <BtnWrap>
             <a className="workoutButton" href="/grid">See Today's Workout</a>
           </BtnWrap>
+
+          <Slider aria-label="motivation" aria-valuetext="motivational"></Slider>
+
+
 
 
 
