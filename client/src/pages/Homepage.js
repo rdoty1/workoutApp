@@ -78,6 +78,7 @@ class HomePage extends Component {
 
            <Jumbotron>
             <h1> WORKOUT APP</h1>
+            <a className="loginStyle" href="/Login">Login</a>
             </Jumbotron>
 
 
