@@ -30,9 +30,11 @@ class Cal extends Component {
           value={this.state.date}
          
         />
+
           <BtnWrap>
             <a className="workoutButton" href="/grid">See Today's Workout</a>
           </BtnWrap>
+
 
 
         <Footer>
