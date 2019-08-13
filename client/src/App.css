@@ -148,49 +148,51 @@ form {
 }
 
 .calDisplay {
-    padding:15px;
+    padding: 15px;
 }
 
 .Login {
     font-family: sans-serif;
     text-align: center;
 }
+
 .form-input {
     margin: 0 auto;
     height: 500px;
     width: 500px;
 }
+
 .form-inside-input {
     height: 500px;
     width: 200px;
     margin: 0 auto;
-    padding-left:40%;
-    padding-right:40%;
-    padding-top:10%;
-    border:solid;
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 10%;
+    border: solid;
 }
 
 .insert {
-    color:black;
-    
+    color: black;
 }
 
 .formContainer {
-    border:solid;
-    border-color:black;
-    width:500px;
-    height:500px;
+    border: solid;
+    border-color: black;
+    width: 500px;
+    height: 500px;
 }
 
 .title {
-    color:red;
-    
+    color: red;
 }
 
 .please {
-    text-align:center;
+    text-align: center;
 }
 
-.formHeader {
-  
+.loginStyle {
+    float: right;
+    margin-right: 5em;
+    color: white;
 }
