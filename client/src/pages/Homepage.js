@@ -6,6 +6,8 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import {Form} from "../components/Form";
 import userService from "../utils/userService";
 import { runInThisContext } from 'vm';
+import {Link,Redirect} from 'react-router-dom'
+
 
 
 
@@ -21,7 +23,8 @@ class HomePage extends Component {
       daysPerWeek:'',
       experienceLevel:'',
       createdAt: '',
-      updatedAt: ''
+      updatedAt: '',
+      redirect: false
     }
 
     componentDidMount()  {
@@ -32,47 +35,55 @@ class HomePage extends Component {
     loadUsers = (user) => {
       userService.findUser(user)
       console.log(user)
+      
 
         
     }
 
-      handleChange = event => {
-        //looking for the change of input values on form 
-        //check the values in that event 
+    handleChange = event => {
+      //looking for the change of input values on form 
+      //check the values in that event 
+    
+      const {name, value} = event.target;
+      this.setState({
+          [name]: value       
+      })
       
-        const {name, value} = event.target;
-        this.setState({
-            [name]: value       
-        })
-        
-      }
+    }
 
-      handleFormSubmit = event => {
-        event.preventDefault();
-        console.log(this.state.firstName);
-         const user = {
-          firstName:this.state.firstName,
-          lastName: this.state.lastName,
-          email: this.state.email,
-          password:this.state.password,
-          age: this.state.age,
-          weight: this.state.weight,
-          timeFrame: this.state.timeFrame,
-          daysPerWeek:this.state.daysPerWeek,
-          experienceLevel:this.state.experienceLevel
+    handleFormSubmit = event => {
+      event.preventDefault();
+      console.log(this.state.firstName);
+        const user = {
+        firstName:this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password:this.state.password,
+        age: this.state.age,
+        weight: this.state.weight,
+        timeFrame: this.state.timeFrame,
+        daysPerWeek:this.state.daysPerWeek,
+        experienceLevel:this.state.experienceLevel,
+      
+        }
+        console.log(user);
+        userService.createUser(user)
+        .then(this.setState({redirect:true}))
+        .catch(err => console.log(err));
 
-         }
-         console.log(user);
-          userService.createUser(user)
-            .then(res => this.loadUsers(user))
-            .catch(err => console.log(err));
-        
-      };
+      
+    };
+
+      
 
 
 
     render() {
+      if (this.state.redirect === true) {
+        return (<Redirect to="/programpicker"/>)
+      }
         return (
+          
 
           <Container fluid>
 
@@ -240,7 +251,8 @@ class HomePage extends Component {
                   </div>
                   <Row>
                   <Col size="md-12">
-                  <input className="submit" type="submit" value="Submit" onClick={this.handleFormSubmit} />
+                  <input className="submit" type="submit" value="Submit" onClick={this.handleFormSubmit} />  
+                 
                 </Col>
                 </Row>
                 
