@@ -82,23 +82,20 @@ class HomePage extends Component {
       if (this.state.redirect === true) {
         return (<Redirect to="/programpicker"/>)
       }
-        return (
-          
-
-          <Container fluid>
-
+        return (<>
            <Jumbotron>
             <h1> WORKOUT APP</h1>
             <a className="loginStyle" href="/Login">Login</a>
             </Jumbotron>
 
-
+<div className='mb-5'>
+<Container>
 
             <Row>
               <Col size="md-6">
-
-            <Container className="bodyOne">
-              <div className="stepOne">
+         
+              <div className="stepOne"> 
+                <div className='p-3'>
               <h1 className="stepOneTitle">STEP ONE: FILL OUT INFORMATION</h1>
                  <br></br>
                   <Row>
@@ -219,8 +216,7 @@ class HomePage extends Component {
                          
                 
               </div>
-            
-            </Container>
+            </div>
             </Col>
             
 
@@ -230,11 +226,9 @@ class HomePage extends Component {
       
 
           <Col size="md-6">
-          <Container className="steps">
-            <Container className="bodyThree">
-              
-              <div className="stepThree">
-    
+           
+              <div className="stepOne">
+       <div className='p-3'>
                 <h1 className="stepOneTitle">
                 STEP TWO: VERIFY YOUR INFORMATION
                 </h1>
@@ -261,24 +255,22 @@ class HomePage extends Component {
                 
 
               </div>
+      </div>
       
-      
-            </Container>
-            </Container>
             </Col>
             </Row>
       
         
-      
+            </Container>
+      </div>
             <Footer className="footer">
               THIS IS OUR PROJECT
             </Footer>
       
-          </Container>
 
 
 
-        )
+        </>)
 
     }
 
