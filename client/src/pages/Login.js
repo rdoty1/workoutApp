@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Jumbotron from '../components/Jumbotron'
-
-
+import Jumbotron from '../components/Jumbotron';
 const txtFieldState = {
-  value: "",
+  value: " ",
   valid: true,
   typeMismatch: false,
-  errMsg: "" 
+  errMsg: " " 
 };
 const ErrorValidationLabel = ({ txtLbl }) => (
   <label htmlFor="" style={{ color: "red" }}>
@@ -134,7 +132,7 @@ class Login extends React.Component {
     return (
       <>
         <Jumbotron>
-            <h1 className="title">
+            <h1 className="title animated bounce delay 2s">
              Login
             </h1>
         </Jumbotron>
@@ -145,12 +143,12 @@ class Login extends React.Component {
             You have successfully submitted a form.
           </p>
         </div>
-
+​
        
-
+​
         <div className="form-input" style={{ display: inputFormDisplay }}>
          <div className="formHeader"> 
-         <h2 className="please"> Please Insert Login Information</h2>
+         
          <form
             className="form-inside-input"
             onSubmit={this.onSubmit}
@@ -161,10 +159,10 @@ class Login extends React.Component {
             {renderFields}
             <input type="submit" value="Submit" />
           </form>
-
-
-
-
+​
+​
+​
+​
          </div>
           
         </div>
@@ -173,6 +171,7 @@ class Login extends React.Component {
     );
   }
 }
-export default Login;
-
 const rootElement = document.getElementById("root");
+
+
+export default Login;
