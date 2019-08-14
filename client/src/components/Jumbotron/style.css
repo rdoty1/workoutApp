@@ -1,14 +1,15 @@
 .jumbotron {
-    height:100px;
-    text-align:center;
-    
-    background-color:black
-
-
+    height: 100px;
+    text-align: center;
+    background-color: white;
+    margin: 10px;
+    border: 10px;
 }
-
 h1 {
-    color:white;
-    margin:0;
-    padding-top:30px;
+    color: #E40C2B;
+    margin: 0;
+    padding-top: 30px;
+    font-family: 'Monoton', cursive;
+    animation-duration: 6s;
+    animation-delay: 2s;
 }

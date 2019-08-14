@@ -8,9 +8,6 @@ import userService from "../utils/userService";
 import { runInThisContext } from 'vm';
 import {Link,Redirect} from 'react-router-dom'
 
-
-
-
 class HomePage extends Component {
     state = {
       firstName:'',
@@ -30,16 +27,10 @@ class HomePage extends Component {
     componentDidMount()  {
         this.loadUsers();
     }
-
-
     loadUsers = (user) => {
       userService.findUser(user)
-      console.log(user)
-      
-
-        
+      console.log(user)    
     }
-
     handleChange = event => {
       //looking for the change of input values on form 
       //check the values in that event 
@@ -50,7 +41,6 @@ class HomePage extends Component {
       })
       
     }
-
     handleFormSubmit = event => {
       event.preventDefault();
       console.log(this.state.firstName);
@@ -69,28 +59,21 @@ class HomePage extends Component {
         console.log(user);
         userService.createUser(user)
         .then(this.setState({redirect:true}))
-        .catch(err => console.log(err));
-
-      
+        .catch(err => console.log(err)); 
     };
-
-      
-
-
-
     render() {
       if (this.state.redirect === true) {
         return (<Redirect to="/programpicker"/>)
       }
         return (<>
            <Jumbotron>
-            <h1> WORKOUT APP</h1>
+            <h1 class="animated bounce delay-2s"> WORKIT.com</h1>
             <a className="loginStyle" href="/Login">Login</a>
             </Jumbotron>
-
-<div className='mb-5'>
-<Container>
-
+          ​
+          <div className='mb-5'>
+          <Container>
+          ​
             <Row>
               <Col size="md-6">
          
@@ -104,7 +87,7 @@ class HomePage extends Component {
                         First Name:
                       </label>
                     </Col>
-
+​
                     <Col size="md-6">
                       <input className="boxes" type="text" name="firstName"  value={this.state.firstName} onChange={this.handleChange} />
                     </Col>
@@ -218,17 +201,10 @@ class HomePage extends Component {
               </div>
             </div>
             </Col>
-            
-
-      
-
-      
-      
-
           <Col size="md-6">
            
               <div className="stepOne">
-       <div className='p-3'>
+              <div className='p-3'>
                 <h1 className="stepOneTitle">
                 STEP TWO: VERIFY YOUR INFORMATION
                 </h1>
@@ -253,7 +229,7 @@ class HomePage extends Component {
                 
                 
                 
-
+​
               </div>
       </div>
       
@@ -266,19 +242,8 @@ class HomePage extends Component {
             <Footer className="footer">
               THIS IS OUR PROJECT
             </Footer>
-      
-
-
-
+  
         </>)
-
     }
-
-
-
-
-
-
 }
-
 export default HomePage

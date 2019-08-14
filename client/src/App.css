@@ -1,67 +1,113 @@
+.jumbotron {
+    background: red;
+    width: 100%;
+    height: 30%;
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 7s;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        background-color: seagreen;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+/* Standard syntax */
+@keyframes example {
+    from {
+        background-color: #FFDC00;
+    }
+    to {
+        background-color: #3CBCC3;
+    }
+}
+.form-group {
+    width: 50%;
+    max-width: 1000px;
+    padding: 14px 14px 14px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+}
+.mb-5 {
+    background-color: whitesmoke;
+}
 .firstName {
     width: 25%;
 }
-
 .stepOneTitle {
     border-bottom: solid;
 }
-
 .form-group {
     width: 50%;
 }
-
 label {
     float: left;
     margin-left: 1em;
+    font-size: 18px;
+    color: white;
+    font-family: 'Squada One', cursive;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
-
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 8%;
+        width: 100%;
+    }
+}
 input {
     width: 10em;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
-
 .userInfo {
     display: flex-start;
     justify-content: left;
 }
-
 .jumbotron {
     height: auto !important;
 }
-
 .boxes {
     align-self: flex-end;
 }
-
 .step {
     display: none;
 }
-
 .fluid {
     width: 100%;
 }
-
 .stepOne {
     /* padding-top: 0px; */
     height: 100%;
     /* margin: 25px; */
-    background-color: darkslategray;
+    background-color: #d64161;
     width: 100%;
     /* margin-top: 51.5px; */
 }
-
 .stepOneTitle {
     color: white;
     padding-top: 5px;
 }
-
-
+h4 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Squada One', cursive;
+}
 /* .stepThreeTitle {
     color: white;
     padding-top: 5px;
 }
-
 .stepThree {
     padding-top: 0px;
     height: 630px;
@@ -70,37 +116,32 @@ input {
     width: 100%;
     margin-top: 75px;
 } */
-
 .submit {
     margin-top: 400px;
     text-align: center;
     margin-left: -130px;
-    background-color: black;
-    color: white;
+    background-color: #F7F4E9;
+    color: #E40C2B;
     position: relative;
+    font-family: 'Squada One', cursive;
 }
-
 .calendarText {
     color: black;
     text-align: center;
 }
-
 .react-calendar {
     width: 100% !important;
     height: 100% !important;
     align-content: center;
 }
-
 .verify {
     float: left;
     text-align: left;
     margin-left: 1em;
 }
-
 .date {
     color: red;
 }
-
 .Bicep.Curls {
     float: left;
     margin: 10px;
@@ -110,12 +151,9 @@ input {
     text-align: left;
     margin-left: 10px;
 }
-
 form {
     float: left;
 }
-
-
 /* .container {
     float: left;
     margin-left: 1em;
@@ -123,68 +161,75 @@ form {
     margin-left: 1em;
     margin-top: -1.5em;
 } */
-
 .calDisplay {
     padding: 15px;
 }
-
 .Login {
     font-family: sans-serif;
     text-align: center;
 }
-
 .form-input {
     margin: 0 auto;
     height: 500px;
     width: 500px;
 }
-
 .form-inside-input {
     height: 500px;
-    width: 200px;
     margin: 0 auto;
     padding-left: 40%;
     padding-right: 40%;
     padding-top: 10%;
     border: solid;
 }
-
 .insert {
     color: black;
 }
-
 .formContainer {
     border: solid;
     border-color: black;
     width: 500px;
     height: 500px;
 }
-
 .title {
     color: red;
 }
-
 .please {
     text-align: center;
 }
-
 .loginStyle {
     float: right;
     margin-right: 5em;
-    color: white;
+    color: #E40C2B;
 }
-
 .workoutButton {
     color: black;
 }
-
 .arnold {
     /* height: 25em; */
     width: 100%;
     display: inline-block;
+    height: 250px;
+    width: 270px;
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
 }
-
 .foot {
     border: solid;
     border-color: black;
+}
+h2 {
+    font-family: 'Squada One', cursive;
+}
+.funky1 {
+    color: red;
+}
+.funky2 {
+    color: blue;
+}
+.funky3 {
+    color: green;
+}
+.funky4 {
+    color: #FFDC00
 }

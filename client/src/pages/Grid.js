@@ -5,14 +5,8 @@ import { Col, Row, Container } from "../components/Grid";
 import SetsForm from "../components/SetsForm"
 import * as firebase from "firebase/app"
 import "firebase/storage"
-
-
-
-
-
 // Import the Grid component.
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
-
 require('dotenv').config({ path: '../.env' });
 
 var firebaseConfig = {
@@ -31,26 +25,18 @@ firebase.initializeApp(firebaseConfig);
 const storageRef = firebase.storage().ref();
 
 // const audioRef = storageRef.child("audio");
-
 // const fileName = `audio_${index}.m4a`;
-
 // const spaceRef = audioRef.child(fileName);
 
 // const path = spaceRef.fullPath;
 
 // const gsReference = firebase.storage().refFromURL("gs://trainer-audio.appspot.com/audio")
 
-
-
-
 class Grids extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
-      music:null,
-
-
+    music:null,
       sets: {
         set1:'',
         set2: '',
@@ -58,11 +44,8 @@ class Grids extends Component {
         set4: '',
       },
 
-
-
     
       data: [
-
         { exercise: "Bicep Curls", sets: 4, reps: 10, difficulty: "Beginner" },
         { exercise: "Hammer Curls", sets: 4, reps: 10, difficulty: "Intermediate" },
         { exercise: "Dumbbell Rows", sets: 4, reps: 10, difficulty: "Intermediate" },
@@ -70,18 +53,12 @@ class Grids extends Component {
         { exercise: "Reverse Curls", sets: 4, reps: 10, difficulty: "Advanced" },
         { exercise: "LAT Pulldown", sets: 4, reps: 10, difficulty: "Beginner" },
         { exercise: "Seated Curls", sets: 4, reps: 10, difficulty: "Intermediate" },
-
       ],
-
       title: "Your Workout Page!",
-
-
 
     }
 
-
   }
-
   async componentDidMount() {
     try {
       // httpRef
@@ -94,9 +71,7 @@ class Grids extends Component {
       console.log(err)
     }
   }
-
   // componentDidMount() { 
-
   //   const axiosResponse = axios.get(httpRef)
   //       .then(function (response) {
   //         // handle success
@@ -109,9 +84,7 @@ class Grids extends Component {
   //       .finally(function () {
   //         // always executed
   //       });
-
   //   console.log(axiosResponse)
-
   // }
 
   SelectAudio=(index) => (event)=>{
@@ -142,9 +115,7 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
     this.setState({
       [name]:value
     })
-
   }
-
   handleFormSubmit = event => {
     event.preventDefault();
     console.log(this.state.set1); 
@@ -154,20 +125,12 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
       set3:this.state.set3,
       set4:this.state.set4
       
-
     }
-
-
-    
 
   }
 
-
   render() {
     return (
-
-      
-
         <div className="App">
             <Jumbotron>
               <h1 className="App-title">{this.state.title}</h1>
@@ -221,14 +184,11 @@ const httpRef = storageRef.child(`audio/audio_${myIndex}.m4a`).getDownloadURL().
               )}
    </Row>
    </div>
-
-
       </Container>
-
+​
       </div>
     );
   }
-
 }
 
 
